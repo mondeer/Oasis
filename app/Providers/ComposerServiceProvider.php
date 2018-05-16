@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Oasis\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -15,7 +15,7 @@ class ComposerServiceProvider extends ServiceProvider {
     {
         // Using class based composers...
         //For Backend Sidebar Menu
-        View::creator('backend.layouts.partials.menubar', 'App\Http\ViewCreators\BackendMenuCreator');
+        View::creator('backend.layouts.partials.menubar', 'Oasis\Http\ViewCreators\BackendMenuCreator');
     }
 
     /**

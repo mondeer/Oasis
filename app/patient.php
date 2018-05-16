@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Oasis;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,27 +15,16 @@ class patient extends Model
         'gender'
     ];
 
-    /**
-     * @return string
-     */
     public function getRouteKeyName()
     {
         return 'username';
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
-     */
     public function image()
     {
         return $this->morphOne(Image::class, 'imageable');
     }
 
-    /**
-     * @param array $options
-     * @return bool|null|void
-     * @throws \Exception
-     */
     public function delete(array $options = [])
     {
         if ($this->image)

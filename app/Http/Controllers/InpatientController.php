@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Oasis\Http\Controllers;
 
-use App\doctor;
-use App\Http\Requests\StoreInpatient;
-use App\Http\Requests\UpdateInpatient;
-use App\inpatient;
-use App\staff;
+use Oasis\doctor;
+use Oasis\Http\Requests\StoreInpatient;
+use Oasis\Http\Requests\UpdateInpatient;
+use Oasis\inpatient;
+use Oasis\staff;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 

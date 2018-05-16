@@ -30,7 +30,7 @@
       "database/factories"
     ],
     "psr-4": {
-      "App\\": "app/"
+      "Oasis\\": "app/"
     },
     "files": [
       "app/Helpers.php"

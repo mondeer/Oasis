@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\ViewCreators;
+namespace Oasis\Http\ViewCreators;
 
 use Illuminate\View\View;
 
@@ -9,7 +9,7 @@ class BackendMenuCreator {
     /**
      * The user model.
      *
-     * @var \App\User;
+     * @var \Oasis\User;
      */
     protected $user;
 
@@ -54,38 +54,38 @@ class BackendMenuCreator {
 
         array_push($menu, [
             'class' => false,
-            'route' => route('patient.index'),
+            'route' => route('student.index'),
             'icon'  => 'md md-accessibility',
-            'title' => 'Patient'
+            'title' => 'Student'
         ]);
 
-        array_push($menu, [
-            'class' => false,
-            'route' => route('doctor.index'),
-            'icon'  => 'md md-person',
-            'title' => 'Doctor'
-        ]);
-
-        array_push($menu, [
-            'class' => false,
-            'route' => route('staff.index'),
-            'icon'  => 'md md-account-circle',
-            'title' => 'Staff'
-        ]);
-
-        array_push($menu, [
-            'class' => false,
-            'route' => route('appointment.index'),
-            'icon'  => 'md md-event',
-            'title' => 'Appointment'
-        ]);
-
-        array_push($menu, [
-            'class' => false,
-            'route' => route('inpatient.index'),
-            'icon'  => 'md md-person-outline',
-            'title' => 'Inpatient'
-        ]);
+        // array_push($menu, [
+        //     'class' => false,
+        //     'route' => route('doctor.index'),
+        //     'icon'  => 'md md-person',
+        //     'title' => 'Doctor'
+        // ]);
+        //
+        // array_push($menu, [
+        //     'class' => false,
+        //     'route' => route('staff.index'),
+        //     'icon'  => 'md md-account-circle',
+        //     'title' => 'Staff'
+        // ]);
+        //
+        // array_push($menu, [
+        //     'class' => false,
+        //     'route' => route('appointment.index'),
+        //     'icon'  => 'md md-event',
+        //     'title' => 'Appointment'
+        // ]);
+        //
+        // array_push($menu, [
+        //     'class' => false,
+        //     'route' => route('inpatient.index'),
+        //     'icon'  => 'md md-person-outline',
+        //     'title' => 'Inpatient'
+        // ]);
 
         $view->with('allMenu', $menu);
     }

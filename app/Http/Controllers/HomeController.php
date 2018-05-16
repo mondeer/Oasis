@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Oasis\Http\Controllers;
 
-use App\Career;
-use App\Post;
-use App\Team;
-use App\Work;
+use Oasis\Career;
+use Oasis\Post;
+use Oasis\Team;
+use Oasis\Work;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

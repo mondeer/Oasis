@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Oasis\Http\Controllers;
 
-use App\Http\Requests\StorePatient;
-use App\Http\Requests\UpdatePatient;
-use App\patient;
+use Oasis\Http\Requests\StorePatient;
+use Oasis\Http\Requests\UpdatePatient;
+use Oasis\patient;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -39,7 +39,7 @@ class PatientController extends Controller {
 
     public function datatable()
     {
-        return Datatables::eloquent(Patient::query())->make(true);
+        return Datatables::of(Patient::query())->make(true);
     }
 
     public function edit(Patient $patient)

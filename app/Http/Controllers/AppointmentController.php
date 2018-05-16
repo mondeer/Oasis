@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-use App\appointment;
-use App\doctor;
-use App\Http\Requests\StoreAppointment;
-use App\Http\Requests\UpdateAppointment;
-use App\Mail\AppointmentMail;
+namespace Oasis\Http\Controllers;
+use Oasis\appointment;
+use Oasis\doctor;
+use Oasis\Http\Requests\StoreAppointment;
+use Oasis\Http\Requests\UpdateAppointment;
+use Oasis\Mail\AppointmentMail;
 use function foo\func;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -42,14 +42,12 @@ class AppointmentController extends Controller
      */
     public function store(StoreAppointment $request)
     {
-        $email = Doctor::pluck('email', 'id')->map(function ($item)
-        {
-            return ucwords($item);
-        });
+
 
         DB::transaction(function () use ($request)
         {
             $data = $request->data();
+            $email = Doctor::pluck('email', 'id');
 
             $inputs = $request->except('_token');
 

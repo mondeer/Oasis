@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Oasis;
 
 use Illuminate\Database\Eloquent\Model;
 

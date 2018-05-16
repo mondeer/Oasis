@@ -4,36 +4,34 @@ namespace Oasis\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePatient extends FormRequest {
-
+class StudRequest extends FormRequest
+{
     public function authorize()
     {
         return true;
     }
 
-
     public function rules()
     {
-        return [
-          'first_name'  => 'requred|max:100',
-          'middle_name' => 'required',
-          'last_name'   => 'required',
-          'national_id' => 'required',
-          'gender'      => 'required',
-          'dob'         => 'required',
-          'reg_no'      => 'required',
-          'course'      => 'required',
-          'department'  => 'required',
-          'email'       => 'required|email',
-          'mobile'      => 'required',
-          'postal_address'=>'required',
-          'next_of_kin' => 'required',
-          'next_of_kin_contact'=.'required',
-          'guardian'    => 'required',
-          'image'       => 'image|max:2048'
-        ];
+      return [
+        'first_name'  => 'requred|max:100',
+        'middle_name' => 'required',
+        'last_name'   => 'required',
+        'national_id' => 'required',
+        'gender'      => 'required',
+        'dob'         => 'required',
+        'reg_no'      => 'required',
+        'course'      => 'required',
+        'department'  => 'required',
+        'email'       => 'required',
+        'mobile'      => 'required',
+        'postal_address'=>'required',
+        'next_of_kin' => 'required',
+        'next_of_kin_contact'=.'required',
+        'guardian'    => 'required',
+        'image'       => 'image|max:2048'
+      ];
     }
-
     public function data()
     {
         $data = [

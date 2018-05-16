@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => "Patient Management System",
+    'name' => "Oasis || College of Technology",
 
     /*
     |------------------------
@@ -176,12 +176,12 @@ return [
         /*
          * Package Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        App\Providers\ComposerServiceProvider::class,
+        Oasis\Providers\AppServiceProvider::class,
+        Oasis\Providers\AuthServiceProvider::class,
+        // Oasis\Providers\BroadcastServiceProvider::class,
+        Oasis\Providers\EventServiceProvider::class,
+        Oasis\Providers\RouteServiceProvider::class,
+        Oasis\Providers\ComposerServiceProvider::class,
 
     ],
 

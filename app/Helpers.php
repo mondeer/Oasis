@@ -19,7 +19,7 @@ function user_avatar($width, $username = null)
 {
     if ($username)
     {
-        $user = \App\Models\User::whereUsername($username)->first();
+        $user = \Oasis\Models\User::whereUsername($username)->first();
     } else
     {
         $user = auth()->user();
@@ -60,7 +60,7 @@ function thumbnail($width, $height = null, $entity = null)
  */
 function setting($query)
 {
-    $setting = \App\Setting::fetch($query)->first();
+    $setting = \Oasis\Setting::fetch($query)->first();
 
     return $setting ? $setting->value : null;
 }
@@ -73,7 +73,7 @@ function latestPosts($type = 'large')
 {
     $latestPosts = [];
 
-    $posts = App\Post::published()->latest()->limit(6)->get();
+    $posts = Oasis\Post::published()->latest()->limit(6)->get();
 
     if ('large' == $type)
     {
@@ -115,7 +115,7 @@ function featuredPosts()
 {
     $featuredPosts = [];
 
-    foreach ($posts = App\Post::published()->featured()->latest()->limit(6)->get() as $post)
+    foreach ($posts = Oasis\Post::published()->featured()->latest()->limit(6)->get() as $post)
     {
         array_push($featuredPosts, [
             'title'     => $post->title,
@@ -135,5 +135,5 @@ function featuredPosts()
  */
 function tags()
 {
-    return App\Tag::all();
+    return Oasis\Tag::all();
 }

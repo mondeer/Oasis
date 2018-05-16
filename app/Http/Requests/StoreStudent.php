@@ -4,13 +4,12 @@ namespace Oasis\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePatient extends FormRequest {
+class StoreStudent extends FormRequest {
 
     public function authorize()
     {
         return true;
     }
-
 
     public function rules()
     {
@@ -24,7 +23,7 @@ class StorePatient extends FormRequest {
           'reg_no'      => 'required',
           'course'      => 'required',
           'department'  => 'required',
-          'email'       => 'required|email',
+          'email'       => 'required',
           'mobile'      => 'required',
           'postal_address'=>'required',
           'next_of_kin' => 'required',

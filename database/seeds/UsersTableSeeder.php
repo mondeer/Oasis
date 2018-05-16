@@ -18,11 +18,11 @@ class UsersTableSeeder extends Seeder {
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         // create user
-        App\User::create([
-            'name'     => 'PMS Admin',
-            'username' => str_slug('PMS Admin'),
-            'email'    => 'admin@pms.com',
-            'password' => bcrypt('admin@pms')
+        Oasis\User::create([
+            'name'     => 'OCT Admin',
+            'username' => str_slug('OCT Admin'),
+            'email'    => 'admin@oct.com',
+            'password' => bcrypt('admin@oct')
         ]);
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Oasis\Http\Controllers;
 
-use App\doctor;
-use App\Http\Requests\StoreDoctor;
-use App\Http\Requests\UpdateDoctor;
+use Oasis\doctor;
+use Oasis\Http\Requests\StoreDoctor;
+use Oasis\Http\Requests\UpdateDoctor;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 

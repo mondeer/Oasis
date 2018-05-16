@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Oasis\Http\Controllers;
 
-use App\Http\Requests\StoreStaff;
-use App\Http\Requests\UpdateStaff;
-use App\staff;
+use Oasis\Http\Requests\StoreStaff;
+use Oasis\Http\Requests\UpdateStaff;
+use Oasis\staff;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
